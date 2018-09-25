@@ -2,7 +2,8 @@ package com.framework;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.micronaut.security.Secured;
+import io.micronaut.security.annotation.Secured;
+//import io.micronaut.security.Secured;
 import io.micronaut.views.View;
 
 import javax.annotation.Nullable;

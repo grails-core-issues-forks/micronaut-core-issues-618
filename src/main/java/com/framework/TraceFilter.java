@@ -19,8 +19,7 @@ public class TraceFilter implements HttpServerFilter {
     @Override
     public Publisher<MutableHttpResponse<?>> doFilter(HttpRequest<?> request, ServerFilterChain chain) {
 
-        System.out.println("request body:");
-        System.out.println(request.getBody());
+        System.out.println("request body:" + request.getBody());
 
         return traceService.trace(request)
                 .switchMap(aBoolean -> chain.proceed(request))

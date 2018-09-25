@@ -3,7 +3,8 @@ package com.framework;
 import io.micronaut.core.util.CollectionUtils;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
-import io.micronaut.security.Secured;
+import io.micronaut.security.annotation.Secured;
+//import io.micronaut.security.Secured;
 import io.micronaut.views.ModelAndView;
 
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public class DemoController {
         return new ModelAndView("/login", CollectionUtils.mapOf("name", "lwj", "date", new Date()));
     }
 
-    @Consumes({MediaType.APPLICATION_FORM_URLENCODED, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     @Post(value = "/demo1")
     ModelAndView postDemo1(@Nullable @Body LoginCommand command) {
         return new ModelAndView("login", CollectionUtils.mapOf("date", new Date()));
