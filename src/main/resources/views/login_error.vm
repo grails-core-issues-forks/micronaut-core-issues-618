@@ -23,16 +23,13 @@
     <div id="darkbannerwrap"></div>
     
     <form method="post" action="/demo/demo1?ts=$!{date.time}">
-        <input name="username" placeholder="username"  type="text" lay-verify="required" class="layui-input" >
+        <input name="username" placeholder="username"  type="text" lay-verify="required" class="layui-input" value="myusername" >
         <hr class="hr15">
-        <input name="password" lay-verify="required" placeholder="password"  type="password" class="layui-input">
+        <input name="password" lay-verify="required" placeholder="password"  type="password" class="layui-input" value="mypassword">
         <hr class="hr15">
         <div style="height: 40px;">
             <div style="width: 40%; float: left;">
-                <input name="jcaptcha" lay-verify="required" placeholder="jcaptcha"  type="text" class="layui-input" style="width: 100%;">
-            </div>
-            <div style="float: left;width: 40%; ">
-                <img id="jcaptcha" src="/jcaptcha?ts=$!{date.time}" style="height:40px; float: right;" >
+                <input name="jcaptcha" lay-verify="required" placeholder="jcaptcha"  type="text" class="layui-input" style="width: 100%;" value="myjcaptcha">
             </div>
         </div>
         <hr class="hr15">
