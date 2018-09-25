@@ -1,0 +1,71 @@
+{
+    "imageActionName": "uploadimage",
+    "imageFieldName": "upfile",
+    "imageMaxSize": 204800000,
+    "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp",".webp"],
+    "imageCompressEnable": true,
+    "imageCompressBorder": 1600,
+    "imageInsertAlign": "none",
+    "imageUrlPrefix": "",
+    "imagePathFormat": "WEBSITE_KEY.SITEATTACHEPATH/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "scrawlActionName": "uploadscrawl",
+    "scrawlFieldName": "upfile",
+    "scrawlPathFormat": "WEBSITE_KEY.SITEATTACHEPATH/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "scrawlMaxSize": 204800000,
+    "scrawlUrlPrefix": "",
+    "scrawlInsertAlign": "none",
+
+    "snapscreenActionName": "uploadimage",
+    "snapscreenPathFormat": "WEBSITE_KEY.SITEATTACHEPATH/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "snapscreenUrlPrefix": "",
+    "snapscreenInsertAlign": "none",
+
+    "catcherLocalDomain": ["127.0.0.1", "localhost", "img.baidu.com"],
+    "catcherActionName": "catchimage",
+    "catcherFieldName": "source",
+    "catcherPathFormat": "WEBSITE_KEY.SITEATTACHEPATH/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "catcherUrlPrefix": "",
+    "catcherMaxSize": 204800000,
+    "catcherAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp",".webp"],
+
+    "videoActionName": "uploadvideo",
+    "videoFieldName": "upfile",
+    "videoPathFormat": "WEBSITE_KEY.SITEATTACHEPATH/video/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "videoUrlPrefix": "",
+    "videoMaxSize": 10240000000,
+    "videoAllowFiles": [
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid"],
+
+    "fileActionName": "uploadfile",
+    "fileFieldName": "upfile",
+    "filePathFormat": "WEBSITE_KEY.SITEATTACHEPATH/file/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "fileUrlPrefix": "",
+    "fileMaxSize": 5120000000,
+    "fileAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ],
+
+    "imageManagerActionName": "listimage",
+    "imageManagerListPath": "WEBSITE_KEY.SITEATTACHEPATH/image/",
+    "imageManagerListSize": 20,
+    "imageManagerUrlPrefix": "",
+    "imageManagerInsertAlign": "none",
+    "imageManagerAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
+
+    "fileManagerActionName": "listfile",
+    "fileManagerListPath": "WEBSITE_KEY.SITEATTACHEPATH/file/",
+    "fileManagerUrlPrefix": "",
+    "fileManagerListSize": 20,
+    "fileManagerAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ]
+}

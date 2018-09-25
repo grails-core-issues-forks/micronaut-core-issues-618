@@ -1,0 +1,55 @@
+---
+micronaut:
+  application:
+    name: com-framework-test1
+---
+micronaut:
+  server:
+    port: 8080
+    maxRequestSize: 10MB
+    netty:
+      maxHeaderSize: 500KB # maximum size for headers
+      worker:
+        threads: 16 # number of netty worker threads
+      childOptions:
+        autoRead: true # auto read request body
+---
+micronaut:
+  security:
+    enabled: true
+    interceptUrlMap:
+    - pattern: /static/**
+      httpMethod: GET
+      access:
+      - isAnonymous()
+    endpoints:
+      login:
+        enabled: true
+      logout:
+        enabled: true
+    session:
+      enabled: true
+      loginSuccessTargetUrl: /
+      loginFailureTargetUrl: /login/authFailed
+
+---
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+
+micronaut:
+  router:
+    static:
+      resources:
+        enabled: true
+        mapping: /static/**
+        paths: classpath:static
