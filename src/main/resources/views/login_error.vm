@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>后台登录</title>
+    <title>login</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -19,27 +19,24 @@
 <body class="login-bg">
 
 <div class="login layui-anim layui-anim-up">
-    <div class="message">后台管理登录 </div>
+    <div class="message">Login </div>
     <div id="darkbannerwrap"></div>
     
     <form method="post" action="/demo/demo1?ts=$!{date.time}">
-        <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
+        <input name="username" placeholder="username"  type="text" lay-verify="required" class="layui-input" >
         <hr class="hr15">
-        <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
+        <input name="password" lay-verify="required" placeholder="password"  type="password" class="layui-input">
         <hr class="hr15">
         <div style="height: 40px;">
             <div style="width: 40%; float: left;">
-                <input name="jcaptcha" lay-verify="required" placeholder="验证码"  type="text" class="layui-input" style="width: 100%;">
+                <input name="jcaptcha" lay-verify="required" placeholder="jcaptcha"  type="text" class="layui-input" style="width: 100%;">
             </div>
             <div style="float: left;width: 40%; ">
                 <img id="jcaptcha" src="/jcaptcha?ts=$!{date.time}" style="height:40px; float: right;" >
             </div>
-            <div style="float: right; line-height: 40px;">
-                <a href="javascript:void(0)" onclick="reloadImg();return false;">点击刷新</a>
-            </div>
         </div>
         <hr class="hr15">
-        <input value="登录" style="width:100%;" type="submit">
+        <input value="submit" style="width:100%;" type="submit">
         <hr class="hr20" >
     </form>
 </div>
@@ -50,31 +47,9 @@
         layui.use(['form','layer'], function(){
             var form = layui.form;
             var layer = layui.layer;
-
-            /*
-            form.on('submit(login)', function(data){
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/demo/demo2',
-                    data:data.field,
-                    success: function(data) { alert('data: ' + data); },
-                    dataType: 'json'
-                });
-                
-                return false;
-            });
-
-            */
-
-
         });
     })
-
-    function reloadImg(){
-        $('#jcaptcha').attr("src","/jcaptcha?ts="+(new Date().getTime()))
-    }
-
+	
 </script>
 
 <!-- 底部结束 -->
